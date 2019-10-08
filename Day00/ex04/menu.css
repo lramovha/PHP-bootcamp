@@ -1,0 +1,74 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    menu.css                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: lramovha <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/10/08 17:25:10 by lramovha          #+#    #+#              #
+#    Updated: 2019/10/08 17:33:35 by lramovha         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	display: block;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+/*Menu*/
+ul.menu > li {
+	position: relative;
+	float: left;
+}
+
+ul.menu > li > a {
+	display: block;
+	background-color: grey;
+	text-align: center;
+	padding: 10px 15px 10px 15px; 
+	font-size: 15px;
+	color: #ffffff; 
+}
+
+ul.menu >li > a:hover {
+	background-color: green;
+}
+
+/*Submenu*/
+
+ul.submenu {
+    display: none;
+    position: absolute;
+    width: 120px;
+    top: 37px;
+    left: 0;
+    background-color: white;
+    border: 1px solid red;
+}
+
+ul.submenu > li {
+    display: block;
+}
+
+ul.submenu > li > a {
+    display: block;
+    padding: 10px;
+    color: white;
+    background-color: grey;
+    text-decoration: none;
+}
+
+ul.submenu > li > a:hover {
+    text-decoration: underline;
+}
+
+ul.menu > li:hover > ul.submenu {
+    display: block;
+}
